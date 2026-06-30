@@ -1,0 +1,382 @@
+/* ===== Reset ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f8fc;
+    color:#333;
+}
+
+/* ===== Header ===== */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#002147;
+    color:white;
+    padding:15px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:60px;
+    margin-right:10px;
+    animation:floatLogo 3s infinite;
+}
+
+.logo h1{
+    font-size:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:20px;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#FFD700;
+}
+
+/* ===== Hero Section ===== */
+
+.hero{
+    background:url("images/campus.jpg") center/cover no-repeat;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    background:rgba(0,0,0,.55);
+    padding:60px;
+    border-radius:15px;
+    color:white;
+    animation:fadeIn 2s;
+}
+
+.overlay h2{
+    font-size:55px;
+}
+
+.overlay p{
+    font-size:24px;
+    margin:20px 0;
+}
+
+.overlay button{
+    padding:15px 35px;
+    background:#ff9800;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+.overlay button:hover{
+    background:#ff5722;
+    transform:scale(1.08);
+}
+
+/* ===== Sections ===== */
+
+section{
+    padding:70px;
+    text-align:center;
+}
+
+section h2{
+    color:#002147;
+    margin-bottom:25px;
+    font-size:35px;
+}
+
+/* ===== Cards ===== */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0;
+    color:#002147;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+
+/* ===== Statistics ===== */
+
+.statistics{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    background:#e8f0ff;
+}
+
+.stat{
+    background:white;
+    width:220px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:scale(1.05);
+}
+
+.stat h2{
+    color:#0056b3;
+    font-size:40px;
+}
+
+/* ===== News ===== */
+
+.news{
+    background:#002147;
+    color:white;
+}
+
+.news h2{
+    color:white;
+}
+
+marquee{
+    font-size:20px;
+}
+
+/* ===== Gallery ===== */
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.gallery img{
+    width:300px;
+    height:200px;
+    border-radius:12px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+}
+
+/* ===== Contact ===== */
+
+#contact{
+    background:#eef4ff;
+}
+
+#contact p{
+    margin:10px;
+    font-size:18px;
+}
+
+/* ===== Footer ===== */
+
+footer{
+    background:#00152d;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===== Animations ===== */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes floatLogo{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* ===== Responsive ===== */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    display:block;
+    margin:10px;
+}
+
+.overlay h2{
+    font-size:35px;
+}
+
+.overlay p{
+    font-size:18px;
+}
+
+.cards,
+.statistics,
+.gallery{
+    flex-direction:column;
+    align-items:center;
+}
+
+.card,
+.stat{
+    width:90%;
+}
+
+.gallery img{
+    width:90%;
+    height:auto;
+}
+
+}
+/* Admission Form */
+
+.admission-form{
+
+width:60%;
+
+margin:auto;
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 0 15px rgba(0,0,0,0.2);
+
+}
+
+.admission-form label{
+
+display:block;
+
+margin-top:15px;
+
+font-weight:bold;
+
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea{
+
+width:100%;
+
+padding:12px;
+
+margin-top:5px;
+
+border:1px solid #ccc;
+
+border-radius:8px;
+
+font-size:16px;
+
+}
+
+.admission-form input[type="submit"]{
+
+background:#002147;
+
+color:white;
+
+cursor:pointer;
+
+margin-top:20px;
+
+border:none;
+
+font-size:18px;
+
+transition:0.3s;
+
+}
+
+.admission-form input[type="submit"]:hover{
+
+background:#ff9800;
+
+transform:scale(1.03);
+
+}
